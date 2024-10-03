@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;  
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(bank.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+#summary {
+    margin-top: 30px;
+}
+
+.button {
+    background: transparent;
+    color: #fefae0;
+    border: 2px solid #fefae0;
+    padding: 15px;
+    margin: 20px;
+    display: inline-block;
+    text-align: center;
+    width: 300px;
+    border-radius: 10px;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    color: #fefae0;
+}
+
+.button:hover {
+    background-color: skyblue;
+}
+
+.montserrat {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    color: #fefae0;
+}
+
+.container{
+    background: transparent;
+    backdrop-filter: blur(10px);
+    padding: 10px 10px;
+    border: 2px solid #fefae0;
+    border-radius: 10px;
+    width: 500px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

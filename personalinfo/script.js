@@ -6,19 +6,32 @@ document.getElementById("info-form").addEventListener("submit", function(event) 
     let age = document.getElementById("age").value;
     let hobbies = document.getElementById("hobbies").value.split(',').map(hobby => hobby.trim()); 
     let isStudent = document.getElementById("student").checked; 
+    
+
+    if(name === ''){
+        alert('Name cannot be empty!');
+        return;
+    }
+    
+
+    if(age === ''){
+        alert('Age cannot be empty!');
+        return;
+    }
 
     
     let summaryItem = document.createElement('div');
     summaryItem.classList.add('summary-item');
 
     
-    let summaryContent = `
-        <p>
+    let summaryContent = 
+    `
+        <h3>
             Name: ${name} <br>
             Age: ${age} <br>
             Hobbies: ${hobbies.join(', ')} <br>
             Student: ${isStudent ? 'Yes' : 'No'}
-        </p>
+        </h3>
     `;
 
     

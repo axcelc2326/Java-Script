@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Form Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="montserrat">ATM Simulation</h1>
+        <div class="container">
+
+            <input type="text" id="balance" value="0">
+
+            <div class="button-select">
+
+            <button onclick="checkBalance()" class="button">Check Balance</button>
+            <button onclick="deposit()" class="button">Deposit</button>
+            <button onclick="withdraw()" class="button">Withdraw</button>
+            <button onclick="exit()" class="button">Exit</button>
+
+            </div>
+            
+            <p id="message" class="montserrat"></p>
+
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
