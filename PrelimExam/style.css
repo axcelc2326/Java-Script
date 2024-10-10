@@ -1,11 +1,12 @@
 body {
-    background-color: #283618;
-    font-family: Arial, sans-serif;  
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url(111.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+    
 }
 
 h1 {
@@ -28,7 +29,8 @@ input {
 }
 
 button {
-    background-color: #dda15e;
+    background: transparent;
+    backdrop-filter: blur(10px);
     border: 2px solid #fefae0;
     color: white;
     padding: 10px 20px;
@@ -45,9 +47,8 @@ button:hover {
 }
 
 .summary-item {
-    background-color: #606c38;
-    color: #fefae0;
-    border: 2px solid #fefae0;
+    background: transparent;
+    backdrop-filter: blur(10px);
     padding: 15px;
     margin: 20px;
     display: inline-block;
@@ -71,7 +72,8 @@ button:hover {
 }
 
 .summary-item button {
-    background-color: #dda15e;
+    background: transparent;
+    backdrop-filter: blur(10px);
     color: white;
     padding: 5px 10px;
     border: 2px solid #fefae0;
@@ -96,9 +98,36 @@ button:hover {
 }
 
 .container{
-    background-color: #606c38;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     padding: 5px 5px;
-    border: 2px solid #fefae0;
     border-radius: 10px;
     width: 600px;
+}
+
+header {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+nav {
+    margin: 10px 0;
+}
+nav a {
+    color: #ffffff;
+    margin: 0 20px;
+    text-decoration: none;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
 }

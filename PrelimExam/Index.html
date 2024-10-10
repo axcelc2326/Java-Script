@@ -7,45 +7,59 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="montserrat">Shopping Cart</h1>
+    <header>
+        <h1>Welcome to My Home Page</h1>
+        <nav>
+            <a href="../Bank/index.html">Simple Bank</a>
+            <a href="../personalinfo/index.html">Personalinfo</a>
+            <a href="../todolist/index.html">To Do List</a>
+            <a href="../PrelimExam/Index.html">My PrelimExam</a>
+            <a href="../Home/index.html">Exit</a>
+        </nav>
+    </header>
 
-        <form action="" id="fees-form">
-            <h3 class="montserrat">Item Name: </h3>
-            <input type="text" id="item-name" placeholder="Item Name" required>
+    <div class="center">
+        <div class="container">
+            <h1 class="montserrat">Shopping Cart</h1>
 
-            <h3 class="montserrat">Item Price: </h3>
-            <input type="number" id="item-price" placeholder="Item Price" required>
+            <form action="" id="fees-form">
+                <h3 class="montserrat">Item Name: </h3>
+                <input type="text" id="item-name" placeholder="Item Name" required>
 
-            <h3 class="montserrat">Quantity: </h3>
-            <input type="number" id="quantity" placeholder="Quantity" required>
+                <h3 class="montserrat">Item Price: </h3>
+                <input type="number" id="item-price" placeholder="Item Price" required>
 
-            <h3 class="montserrat">
-                <label for="town-select">Select Town to Deliver:</label>
-                <select name="town" id="town-select">
-                    <option value="15">Tubigon ($15)</option>
-                    <option value="20">Clarin ($20)</option>
-                    <option value="25">Calape ($25)</option>
-                </select>
-            </h3>
+                <h3 class="montserrat">Quantity: </h3>
+                <input type="number" id="quantity" placeholder="Quantity" required>
 
-            <h3 class="montserrat">
-                <label for="payment-form">Payment Form:</label>
-                <select name="payment-form" id="payment-form">
-                    <option value="Cash-on-Delivery">Cash on Delivery</option>
-                    <option value="Card-Transaction">Card Transaction</option>
-                </select>
-            </h3><br>
-            <button type="submit">Submit</button>
-        </form>
+                <h3 class="montserrat">
+                    <label for="town-select">Select Town to Deliver:</label>
+                    <select name="town" id="town-select">
+                        <option value="15">Tubigon ($15)</option>
+                        <option value="20">Clarin ($20)</option>
+                        <option value="25">Calape ($25)</option>
+                    </select>
+                </h3>
+
+                <h3 class="montserrat">
+                    <label for="payment-form">Payment Form:</label>
+                    <select name="payment-form" id="payment-form">
+                        <option value="Cash-on-Delivery">Cash on Delivery</option>
+                        <option value="Card-Transaction">Card Transaction</option>
+                    </select>
+                </h3><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <br>
+        <h2 class="montserrat">Cart Items</h2>
+        <div id="summary"></div>
+        <h3 class="montserrat">Total Of All the Chosen Items: </h3>
+        <h2 id="totalChosen" class="montserrat">0</h2>
+        <button id="checkout-button">Checkout</button>    
     </div>
-
-    <br>
-    <h2 class="montserrat">Cart Items</h2>
-    <div id="summary"></div>
-    <h3 class="montserrat">Total Of All the Chosen Items: </h3>
-    <h2 id="totalChosen" class="montserrat">0</h2>
-    <button id="checkout-button">Checkout</button>
+    
 
     <script src="script.js"></script>
 </body>
