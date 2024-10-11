@@ -1,22 +1,34 @@
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', function () {
+    const loginForm = document.getElementById('loginForm');
+    const signupForm = document.getElementById('signupForm');
 
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    const errorMessage = document.getElementById('error-message');
-    const ValidUserName = "axcel";
-    const ValidPassword = "gwapo";
+    signupForm.addEventListener('submit', function (event) {
+        event.preventDefault(); 
 
-    if (username === '' || password === '') {
-        errorMessage.textContent = 'Both fields are required.';
-    } else if (username === ValidUserName && password === ValidPassword) {
-        alert('Login successful!');
-        errorMessage.textContent = '';
-        document.getElementById('username').value = '';
-        document.getElementById('password').value = '';
+        const newUsername = document.getElementById('new-username').value;
+        const newPassword = document.getElementById('new-password').value;
 
-        window.location.href = '../Home/index.html'; 
-    } else {
-        errorMessage.textContent = 'Invalid username or password.';
-    }
+        localStorage.setItem('username', newUsername);
+        localStorage.setItem('password', newPassword);
+
+        alert('Sign up successful! You can now log in.');
+        signupForm.reset(); 
+    });
+
+    loginForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        const storedUsername = localStorage.getItem('username');
+        const storedPassword = localStorage.getItem('password');
+
+        if (username === storedUsername && password === storedPassword) {
+            alert('Login successful!');
+            window.location.href = '../Home/index.html';
+        } else {
+            alert('Invalid username or password. Please try again.');
+        }
+    });
 });
