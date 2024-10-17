@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Simple Vet Shop Page</h1>
+        <nav>
+            <a href="../Home/index.html">Exit</a>
+        </nav>
+    </header>
+    <div class="midle">
+        <form id="info-form">
+            <h1>Pet Information Form</h1>
+
+            <label for="name">Pet Name: </label>
+            <input type="text" id="name" required><br><br>
+
+            <label for="type">Pet Type: </label>
+            <select id="type">
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="rabbit">Rabbit</option>
+                <option value="other">Other</option>
+            </select><br><br>
+
+            <label for="color">Color: </label>
+            <input type="text" id="color"><br><br>
+
+            <label for="age">Age: </label>
+            <input type="number" id="age" required><br><br>
+
+            <label for="doctor">Select Doctor: </label>
+            <select id="doctor">
+                <option value="Dr. Smith">Dr. Smith</option>
+                <option value="Dr. Jones">Dr. Jones</option>
+                <option value="Dr. Brown">Dr. Brown</option>
+            </select><br><br>
+
+            <label for="appointment-date">Appointment Date: </label>
+            <input type="date" id="appointment-date" required><br><br>
+
+            <label for="check">Need's a Doctor Care (Check) or A Regular Check Up (Uncheck)</label>
+            <input type="checkbox" id="check"><br><br>
+
+            <label for="pet-image">Upload Pet Image: </label>
+            <input type="file" id="pet-image" accept="image/*"><br><br>
+
+            <button type="submit" id="addTodo">Submit</button>
+        </form>
+
+        <h2>Doctor's Appointment</h2>
+        <div id="Summary"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
