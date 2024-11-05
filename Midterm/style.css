@@ -53,7 +53,7 @@ h2 {
     padding: 20px;
     background-color: transparent;
     backdrop-filter: blur(10px);
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -72,7 +72,7 @@ input[type="file"] {
     padding: 10px;
     margin: 5px 0 15px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px;
     box-sizing: border-box;
     font-size: 16px;
 }
@@ -85,7 +85,7 @@ input[type="number"] {
     width: calc(100% - 22px);
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 10px;
 }
 
 input[type="checkbox"] {
@@ -109,23 +109,24 @@ button:hover {
 
 
 #Summary {
-    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.summary-item {
+    max-width: 300px;
+    height: 460px;
     margin: 20px auto;
     padding: 20px;
     background-color: transparent;
     backdrop-filter: blur(10px);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
 }
 
-.summary-item {
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
-}
-
-.summary-item:last-child {
-    border-bottom: none;
-}
 
 div .edit-button {
     background-color: #067a21;
@@ -143,7 +144,7 @@ div .delete-button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 1em;
-    margin-left: 650px;
+    margin-right: 10px;
 }
 
 div .edit-button:hover {

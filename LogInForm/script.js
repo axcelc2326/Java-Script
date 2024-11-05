@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (username === storedUsername && password === storedPassword) {
             alert('Login successful!');
-            window.location.href = '../Home/index.html';
+            window.location.href = '../SideBar/index.html';
         } else {
             alert('Invalid username or password. Please try again.');
         }
