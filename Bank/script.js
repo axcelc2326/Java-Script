@@ -47,7 +47,7 @@ function updateBalance() {
 
 function exit() {
     alert("Thank you for using the ATM.");
-    window.location.href = '../Home/index.html';
+    window.location.href = '../SideBar/index.html';
     // document.getElementById('balance').value = 0;
     // document.getElementById('message').innerText = "Thank you for using the ATM.";
     //     balance = 0;

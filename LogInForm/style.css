@@ -1,14 +1,17 @@
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-image: url(111.jpg);
+    /* background-image: url(111.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center; */
+    background: #c2e59c;  
+    background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c); 
+    background: linear-gradient(to right, #64b3f4, #c2e59c);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    color: white;
+    color: black;
 }
 
 .login-container, .signup-container {
@@ -46,17 +49,16 @@ input {
 button {
     width: 100%;
     padding: 10px;
-    background-color: rgba(158, 33, 158, 0.808);
-    color: white;
+    background-color: #64b3f4;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 15px;
 }
 
 button:hover {
-    background-color: rgba(255, 0, 255, 0.808);
+    background-color: #3ba7ff;
 }
 
 .error {

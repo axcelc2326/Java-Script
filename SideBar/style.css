@@ -10,7 +10,7 @@ body {
     background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c); 
     background: linear-gradient(to right, #64b3f4, #c2e59c);
     color: white;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 span{
@@ -18,7 +18,7 @@ span{
 }
 
 header {
-    background-color: #333;
+    background-color: #414141;
     color: white;
     padding: 15px 30px;
     display: flex;
@@ -44,7 +44,7 @@ header h1 {
     background: none;
     border: none;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: color 0.5s ease;
 }
 
 .sidebar-toggle:hover {
@@ -59,7 +59,7 @@ header h1 {
     height: 100%;
     background-color: #2C3E50;
     color: white;
-    transition: left 0.3s ease;
+    transition: left 0.5s ease;
     padding-top: 60px; 
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
@@ -71,14 +71,14 @@ header h1 {
 
 .sidebar ul li {
     padding: 15px 20px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
 }
 
 .sidebar ul li a {
     text-decoration: none;
     color: white;
     display: block;
-    transition: color 0.3s ease;
+    transition: color 0.5s ease;
 }
 
 .sidebar ul li:hover {
@@ -92,7 +92,7 @@ header h1 {
 .content {
     margin-left: 0;
     padding: 80px 30px 30px 30px; 
-    transition: margin-left 0.3s ease;
+    transition: margin-left 0.5s ease;
 }
 
 .content h2 {
@@ -111,4 +111,33 @@ header h1 {
 
 .content.shifted {
     margin-left: 250px; 
+}
+
+a{
+    color: white;
+    padding-left: 15px;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+a:hover{
+    color:#FFD700;
+    transition: color 0.5s ease;
+}
+
+.logout{
+    margin-left: 402px;
+    background-color:  #64b3f4;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+    width: 90px;
+    height: 35px;
+}
+
+.logout:hover {
+    background-color:  #3ba7ff;
 }
