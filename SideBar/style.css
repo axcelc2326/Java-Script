@@ -141,3 +141,23 @@ a:hover{
 .logout:hover {
     background-color:  #3ba7ff;
 }
+
+.picture-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    gap: 15px; 
+    margin-top: 20px;
+}
+
+.picture-item {
+    width: 250px;
+    height: 175px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+}
+
+.picture-item:hover {
+    transform: scale(1.15); 
+}
