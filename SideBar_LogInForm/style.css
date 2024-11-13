@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(135deg, #000000, #b91d1d);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Make sure the background covers the entire viewport */
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    transition: background 0.5s ease;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin: 20px 0;
+}
+
+.form-section {
+    width: 100%;
+    display: none;
+}
+
+.form-section:first-child {
+    display: block;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #f00;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #f00;
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #b91d1d;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1.02);
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+a {
+    color: #f00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #b91d1d;
+}
+
+#error-message, #signup-message {
+    color: #f00;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#signup-section a, #login-section a {
+    text-align: center;
+    margin-top: 15px;
+}
