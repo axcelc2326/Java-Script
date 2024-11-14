@@ -84,6 +84,7 @@ header .logout {
 
 header .logout:hover {
     background-color: #d90000;
+    color: black;
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
