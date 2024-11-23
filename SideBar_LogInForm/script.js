@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const showSignup = document.getElementById('show-signup');
     const showLogin = document.getElementById('show-login');
 
+    // Initialize the users array in localStorage if it doesn't exist
+    if (!localStorage.getItem('users')) {
+        localStorage.setItem('users', JSON.stringify([]));
+    }
+
     showSignup.addEventListener('click', function () {
         loginSection.style.display = 'none';
         signupSection.style.display = 'block';
@@ -17,18 +22,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     signupForm.addEventListener('submit', function (event) {
-        event.preventDefault(); 
+        event.preventDefault();
 
         const newUsername = document.getElementById('new-username').value;
         const newPassword = document.getElementById('new-password').value;
 
-        localStorage.setItem('username', newUsername);
-        localStorage.setItem('password', newPassword);
+        // Retrieve existing users from localStorage
+        const users = JSON.parse(localStorage.getItem('users'));
 
-        alert('Sign up successful! You can now log in.');
-        signupForm.reset(); 
-        loginSection.style.display = 'block';
-        signupSection.style.display = 'none';
+        // Check if the username already exists
+        const userExists = users.some(user => user.username === newUsername);
+
+        if (userExists) {
+            alert('Username already exists. Please choose another.');
+        } else {
+            // Add the new user to the array
+            users.push({ username: newUsername, password: newPassword });
+
+            // Save the updated array back to localStorage
+            localStorage.setItem('users', JSON.stringify(users));
+
+            alert('Sign up successful! You can now log in.');
+            signupForm.reset();
+            loginSection.style.display = 'block';
+            signupSection.style.display = 'none';
+        }
     });
 
     loginForm.addEventListener('submit', function (event) {
@@ -37,12 +55,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
-        const storedUsername = localStorage.getItem('username');
-        const storedPassword = localStorage.getItem('password');
+        // Retrieve existing users from localStorage
+        const users = JSON.parse(localStorage.getItem('users'));
 
-        if (username === storedUsername && password === storedPassword) {
+        // Check if the entered username and password match any user
+        const user = users.find(user => user.username === username && user.password === password);
+
+        if (user) {
             alert('Login successful!');
-            window.location.href = '../SideBar/index.html';
+            window.location.href = '../SideBar/index.html'; // Redirect on successful login
         } else {
             alert('Invalid username or password. Please try again.');
         }
