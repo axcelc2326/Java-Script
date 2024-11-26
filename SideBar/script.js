@@ -16,8 +16,10 @@ function addToCart(product, price) {
 
     if (existingItem) {
         existingItem.quantity += 1; // Increase quantity if the item is already in the cart
+        alert("Item added to Your Order's");
     } else {
         cart.push({ product, price: parseFloat(price), quantity: 1 });
+        alert("Item added to Your Order's");
     }
 
     saveCart();
